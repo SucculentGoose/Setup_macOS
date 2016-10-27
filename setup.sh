@@ -25,6 +25,10 @@ do
     open "${var}"
 done
 
+#setup ssh key
+echo "Lets setup an ssh key"
+ssh-keygen -t rsa
+
 echo "Time to install oh-my-zsh"
 #install oh-my-zsh
 if which zsh > /dev/null;
@@ -37,10 +41,3 @@ then
 else
   echo "Zsh is not installed. Go do that and then install oh-my-zsh"
 fi
-
-#setup ssh key
-echo "Lets setup an ssh key"
-ssh-keygen -t rsa
-
-#all done
-echo "All done!"
