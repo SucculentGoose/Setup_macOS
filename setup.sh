@@ -20,7 +20,13 @@ do
 done
 
 #install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+if which zsh > /dev/null;
+then
+  echo "congratulations zsh is installed!"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-#switch default shell to zsh
-chsh -s $(which zsh)
+  #switch default shell to zsh
+  chsh -s $(which zsh)
+else
+  echo "Zsh is not installed. Go do that and then install oh-my-zsh"
+fi
