@@ -3,11 +3,11 @@
 #Install brew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+#Install some casks
+brew cask install java google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2
+
 #Install some brew things
 brew install git nodejs ruby cask zsh wget python3 chromedriver maven
-
-#Install some casks
-brew cask install google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2
 
 #Need to install some other things
 urls=(
