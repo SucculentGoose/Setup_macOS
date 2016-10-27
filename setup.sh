@@ -3,11 +3,14 @@
 #Install brew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+#Install some brew things
+brew install git nodejs ruby cask zsh wget python3 chromedriver
+
 #Install some casks
 brew cask install java google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2
 
-#Install some brew things
-brew install git nodejs ruby cask zsh wget python3 chromedriver maven
+#maven requires java so needed to install that first
+brew install maven
 
 #Need to install some other things
 urls=(
