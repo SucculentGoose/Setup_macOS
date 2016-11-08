@@ -17,7 +17,7 @@ brew install git nodejs ruby cask zsh wget python3 chromedriver htop
 
 echo "Installing some casks..."
 #Install some casks
-brew cask install java google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser
+brew cask install java google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser tmux
 
 echo "Installing maven"
 #maven requires java so needed to install that first
