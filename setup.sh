@@ -5,7 +5,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 echo "Installing some brew things..."
 #Install some brew things
-brew install git nodejs ruby cask zsh wget python3 chromedriver
+brew install git nodejs ruby cask zsh wget python3 chromedriver htop
 
 echo "Installing some casks..."
 #Install some casks
