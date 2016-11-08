@@ -1,7 +1,15 @@
 #!/bin/bash
 
+# Install Xcode Command-Line Tools
+if ! xcode-select -p ; then
+    xcode-select --install
+    exit 0
+fi
+
 #Install brew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+which brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew doctor || exit $?
 
 echo "Installing some brew things..."
 #Install some brew things
