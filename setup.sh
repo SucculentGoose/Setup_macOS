@@ -7,9 +7,11 @@ if ! xcode-select -p ; then
 fi
 
 #Install brew
-which brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-brew doctor || exit $?
+if which brew > /dev/null;
+then
+        echo "Good job brew is installed"
+else ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 echo "Installing some brew things..."
 #Install some brew things
