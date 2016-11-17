@@ -9,7 +9,7 @@ fi
 #Install brew
 if which brew > /dev/null;
 then
-        echo "Good job brew is installed"
+    echo "Good job brew is installed"
 else ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 

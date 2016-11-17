@@ -1,6 +1,9 @@
-Things to make life easier (idk if this works)
+Things to make life easier
 
-Do these steps first:
+Steps to run:
 
-1. Xcode - install this first and make sure to launch after installing to accept terms
-2. Run in terminal xcode-select --install
+1. git clone git@github.com:jon-van/Setup_macOS.git
+2. cd Setup_macOS
+3. chmod +x setup.sh
+4. ./setup.sh
+5. follow any prompts on screen
