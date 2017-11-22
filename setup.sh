@@ -17,6 +17,8 @@ echo "Installing some brew things..."
 #Install some brew things
 brew install git nodejs ruby cask zsh wget python3 chromedriver htop
 
+brew tap caskroom/cask
+
 echo "Installing some casks..."
 #Install some casks
 brew cask install java google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser tmux flux the-unarchiver fluor authy-desktop
