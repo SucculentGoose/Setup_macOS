@@ -31,13 +31,35 @@ brew install maven
 
 echo 'Lets install some other things, make sure to download them!'
 #Need to install some other things
-urls=(
-    'https://www.jetbrains.com/idea/download/'
-)
-for var in "${urls[@]}"
+#urls=(
+#    'https://www.jetbrains.com/idea/download/'
+#)
+#for var in "${urls[@]}"
+#do
+#    open "${var}"
+#done
+
+#Download the iterm 2 color scheme
+cd ~/Downloads
+git clone https://github.com/arcticicestudio/nord-iterm2.git
+cd
+
+#clone dotfies
+git clone https://github.com/jon-van/dotfiles.git
+
+# Symobilic link of configs
+for x in `ls -A /Users/$USER/repos/dotfiles/`
 do
-    open "${var}"
+    if [ -a /Users/$USER/$x ]
+    then
+        echo "Removing $x"
+        rm -rf $x
+        ln -sf /Users/$USER/git/dotfiles/configs/$x ~
+    else
+        ln -sf /Users/$USER/git/dotfiles/configs/$x ~
+    fi
 done
+
 
 #setup ssh key
 echo "Lets setup an ssh key"
