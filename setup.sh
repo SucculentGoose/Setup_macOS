@@ -15,7 +15,7 @@ fi
 
 echo "Installing some brew things..."
 #Install some brew things
-brew install git nodejs ruby cask zsh wget python3 chromedriver htop
+brew install git nodejs ruby cask zsh wget python3 chromedriver htop wakeonlan
 
 brew tap caskroom/cask
 brew tap railwaycat/emacsmacport
