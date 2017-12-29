@@ -15,15 +15,15 @@ fi
 
 echo "Installing some brew things..."
 #Install some brew things
+brew tap caskroom/cask
 brew install git nodejs ruby cask zsh wget python3 chromedriver htop wakeonlan
 
-brew tap caskroom/cask
 brew tap railwaycat/emacsmacport
 brew update
 brew install emacs-mac
 echo "Installing some casks..."
 #Install some casks
-brew cask install java cscreen discord fetch google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser tmux flux the-unarchiver fluor authy-desktop scroll-reverser pdftotext gimp
+brew cask install cscreen discord fetch google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor authy-desktop scroll-reverser pdftotext gimp java
 
 brew cask install caskroom/cask/intellij-idea-ce
 
@@ -31,22 +31,13 @@ echo "Installing maven"
 #maven requires java so needed to install that first
 brew install maven
 
-echo 'Lets install some other things, make sure to download them!'
-#Need to install some other things
-#urls=(
-#    'https://www.jetbrains.com/idea/download/'
-#)
-#for var in "${urls[@]}"
-#do
-#    open "${var}"
-#done
-
 #Download the iterm 2 color scheme
 cd ~/Downloads
 git clone https://github.com/arcticicestudio/nord-iterm2.git
 cd
 
 #clone dotfies
+cd ~/repos
 git clone https://github.com/jon-van/dotfiles.git
 
 # Symobilic link of configs
@@ -56,9 +47,9 @@ do
     then
         echo "Removing $x"
         rm -rf $x
-        ln -sf /Users/$USER/git/dotfiles/configs/$x ~
+        ln -sf /Users/$USER/repos/dotfiles/$x ~
     else
-        ln -sf /Users/$USER/git/dotfiles/configs/$x ~
+        ln -sf /Users/$USER/repos/dotfiles/$x ~
     fi
 done
 
