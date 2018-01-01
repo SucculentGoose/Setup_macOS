@@ -20,10 +20,10 @@ brew install git nodejs ruby cask zsh wget python3 chromedriver htop wakeonlan
 
 brew tap railwaycat/emacsmacport
 brew update
-brew install emacs-mac
+#brew install emacs-mac
 echo "Installing some casks..."
 #Install some casks
-brew cask install cscreen discord fetch google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor authy-desktop scroll-reverser pdftotext gimp java
+brew cask install cscreen discord fetch google-chrome firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor scroll-reverser pdftotext gimp java
 
 brew cask install caskroom/cask/intellij-idea-ce
 
@@ -53,6 +53,10 @@ do
     fi
 done
 
+#Setup vim stuff
+cd ~
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 #setup ssh key
 echo "Lets setup an ssh key"
