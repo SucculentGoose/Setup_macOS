@@ -23,7 +23,7 @@ brew update
 #brew install emacs-mac
 echo "Installing some casks..."
 #Install some casks
-brew cask install bettertouchtool authy cscreen viscosity visual-studio-code discord fetch google-chrome chromedriver firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor scroll-reverser pdftotext gimp java
+brew cask install bettertouchtool authy cscreen viscosity visual-studio-code discord google-chrome chromedriver firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor scroll-reverser pdftotext gimp java
 
 brew cask install caskroom/cask/intellij-idea-ce
 
@@ -61,6 +61,13 @@ done
 cd ~
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+#Install vscode extensions
+array=( arcticicestudio.nord-visual-studio-code castwide.solargraph christian-kohler.npm-intellisense christian-kohler.path-intellisense CoenraadS.bracket-pair-colorizer dbaeumer.vscode-eslint esbenp.prettier-vscode formulahendry.code-runner k--kato.intellij idea-keybindings mohsen1.prettify-json ms-azuretools.vscode-cosmosdb ms-python.python ms-vscode.azure-account ms-vsliveshare.vsliveshare PeterJausovec.vscode-docker rafaelmaiolla.remote-vscode rebornix.ruby redhat.java techer.open-in-browser )
+for i in "${array[@]}"
+do
+    code --install-extension $i
+done
 
 #setup ssh key
 echo "Lets setup an ssh key"
