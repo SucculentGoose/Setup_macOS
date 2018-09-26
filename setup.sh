@@ -31,9 +31,12 @@ echo "Installing maven"
 #maven requires java so needed to install that first
 brew install maven
 
-#Download the iterm 2 color scheme
+#Download FinderPath
 cd ~/Downloads
 wget https://bahoom.com/finderpath/0.9.7/FinderPath.zip
+unzip FinderPath.zip
+mv FinderPath* /Applications/
+#Download the iterm 2 color scheme
 git clone https://github.com/arcticicestudio/nord-iterm2.git
 cd
 
