@@ -23,7 +23,7 @@ brew update
 #brew install emacs-mac
 echo "Installing some casks..."
 #Install some casks
-brew cask install bettertouchtool authy cscreen viscosity visual-studio-code discord google-chrome chromedriver firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor scroll-reverser pdftotext gimp java
+brew cask install spotmenu bettertouchtool authy cscreen viscosity visual-studio-code discord google-chrome chromedriver firefox postman sublime-text atom wireshark vlc spectacle keepingyouawake licecap tunnelblick iterm2 cyberduck scroll-reverser flux the-unarchiver fluor scroll-reverser pdftotext gimp java
 
 brew cask install caskroom/cask/intellij-idea-ce
 
