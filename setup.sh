@@ -36,6 +36,11 @@ cd ~/Downloads
 wget https://bahoom.com/finderpath/0.9.7/FinderPath.zip
 unzip FinderPath.zip
 mv FinderPath* /Applications/
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py
+pip install virtualenv
+
 #Download the iterm 2 color scheme
 git clone https://github.com/arcticicestudio/nord-iterm2.git
 cd
